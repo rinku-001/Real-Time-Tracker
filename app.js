@@ -3,9 +3,9 @@ const app = express();
 const http = require('http');
 const path = require('path');
 
-const sockerio = require('socket.io');
+const socketio = require('socket.io');
 const server = http.createServer(app);
-const io = sockerio(server);
+const io = socketio(server);
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
